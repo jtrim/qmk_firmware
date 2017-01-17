@@ -15,6 +15,18 @@ enum custom_keycodes {
   SRSFCE
 };
 
+//Tap Dance Declarations
+enum {
+  TD_CTRL_CMD = 0
+};
+
+//Tap Dance Definitions
+qk_tap_dance_action_t tap_dance_actions[] = {
+  //Tap once for Esc, twice for Caps Lock
+  [TD_CTRL_CMD] = ACTION_TAP_DANCE_DOUBLE(KC_LCTRL, KC_LGUI)
+// Other declarations would go here, separated by commas, if you have them
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [BASE] = KEYMAP(  // layer 0 : default
@@ -26,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_F1,   KC_F2, KC_F3,  KC_F4,  KC_LGUI,
                                                        KC_HOME, KC_END,
                                                                 KC_PGUP,
-                                               KC_LCTRL, KC_LALT, KC_PGDN,
+                                      TD(TD_CTRL_CMD), KC_LALT, KC_PGDN,
         // right hand
         MO(MDIA),     KC_7, KC_8,     KC_9,    KC_0,   KC_MINUS, KC_EQUAL,
         TG(SYMB),     KC_Y, KC_U,     KC_I,    KC_O,   KC_P,     KC_BSLS,
