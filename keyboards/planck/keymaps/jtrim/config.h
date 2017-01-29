@@ -4,5 +4,6 @@
 #include "../config.h"
 
 #define DEVICE_VER 0x0004
+#define TAPPING_TERM 200
 
 #endif
