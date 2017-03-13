@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESC,   KC_A,  KC_S,   KC_D,   KC_F,   KC_G,
         KC_LSFT, KC_Z,  KC_X,   KC_C,   KC_V,   KC_B,  LCAG_T(KC_NO),
         KC_F1,   KC_F2, KC_F3,  LALT(KC_LGUI),  KC_LGUI,
-                                                        KC_END, KC_HOME,
+                                                        KC_HOME, KC_END,
                                                                 KC_PGUP,
                                       TD(TD_CTRL_CMD), KC_LALT, KC_PGDN,
         // right hand
